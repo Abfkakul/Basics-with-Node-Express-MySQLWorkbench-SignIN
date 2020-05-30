@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="/css/success.css" rel="stylesheet" type="text/css">
+	<title>Home Page</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg  ">
+	    <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="    false" aria-label="Toggle navigation">
+              
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+      
+              </ul>
+              <form class=" my-2 my-lg-0">
+                <button class="btn btn-outline-success"><a href="/logout" > Log Out</a></button>
+               
+              </form>
+            </div>
+        </div>
+    </nav>
+
+	<div class="container">
+		<div class="jumbotron">
+			<% data.forEach(function(alldata){%>
+              <div>
+              	<h1>Welcome, <%=alldata.Fname%></h1>
+                <br>
+                 <h2>You are from <%=alldata.Country%> </h2>
+              </div>
+
+            <% });%>
+			
+			
+
+			
+		</div>
+	</div>
+
+</body>
+</html>

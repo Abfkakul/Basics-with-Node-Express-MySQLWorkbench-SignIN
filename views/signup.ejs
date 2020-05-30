@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="/css/signup.css" rel="stylesheet" type="text/css">
+	<title>Sign Up Page</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="jumbotron" style="background:transparent !important">
+			<form action="/signup" method="POST">
+				<div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+
+            <div class="row">
+                    
+              <div class="form-group col-lg-4 ">
+                  <label for="name"><b>First name</b></label>
+                  <input type="text" placeholder="ex John" class="form-control" name="fname" id="fn" required>
+              </div>
+
+
+               <div class="form-group col-lg-4 ">
+                  <label for="name"><b>Last name</b></label>
+                  <input type="text" placeholder="ex Wick" class="form-control" name="lname" id="ln" required>
+                      
+               </div>
+
+            </div>
+    
+    
+            
+            <div class="row">
+                <div class="form-group col-lg-4 ">
+                   <label for="email"><b>Email-ID</b></label>
+                   <input type="email" placeholder="Enter Email" class="form-control" name="email" id="em" required>
+                </div>
+
+                <div class="form-group col-lg-4 ">
+                  <label for="psw"><b>Password</b></label>
+                   <input type="password" placeholder="Enter Password" class="form-control" name="psw" id="pas" required>                 
+                </div>
+
+
+                <div class="form-group col-lg-4 ">
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                   <input type="password" placeholder="Repeat Password" class="form-control" name="psw-repeat" id="rpas" required> 
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                    <div class="form-group col-lg-4">
+                        <label for="name"><b>Age</b></label>
+                        <input type="number" placeholder=">17" class="form-control" name="quantity" id="ag" min="18" max="60">
+                    </div>
+
+                 
+                    <div class="form-group col-lg-4">
+
+                    <label><b>Gender</b></label>
+                      <select name="sex" class="form-control" id="box" required>
+                        <option value="" disabled selected>Choose Gender</option>
+                        <option value="female">Female</option>
+                        <option value="male" >Male</option>
+                        <option value="other" >Other</option>
+                      </select> 
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                    <label ><b>Country</b></label> 
+                    <select name="country" class="form-control" id="box" required>
+                      <option value="" disabled selected>Choose Country</option>
+                      <% data.forEach(function(result){%>
+                          <option value="<%=result.Country%>"><%=result.Country%></option>
+                     <% });%>
+                    </select>
+                    
+                    <!-- <select name="country" class="form-control" id="box" required>
+                       <option value="bangladesh">Bangladesh</option>
+                       <option value="china">China</option>
+                       <option value="india">India</option>
+                       <option value="pakistan">Pakistan</option>
+                    </select> -->
+                  </div>
+                 </div>
+          
+
+               <label>
+                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+               </label>
+
+               <p>By creating an account you agree to <a href="https://www.youtube.com/static?gl=GB&template=terms" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    
+                 <input type="submit" class="btn btn-outline-success" id="three" value="Submit">
+      
+    
+               </div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
